@@ -7,7 +7,7 @@ COPY . /app
 # Install dependencies
 RUN npm install
 
-EXPOSE 5000
+EXPOSE 000
 
 # Start the application
 CMD ["node", "index.js"]
