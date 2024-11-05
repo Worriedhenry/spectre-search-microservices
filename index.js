@@ -9,7 +9,7 @@ require('dotenv').config();
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB)
+mongoose.connect("mongodb+srv://kaushikankitsharma05:lrvhc3niJknZrd1O@spectrecluster.ymez50f.mongodb.net/SPECTRE")
   .then(() => {
     console.log('Connected to DB');
   })
