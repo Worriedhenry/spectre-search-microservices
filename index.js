@@ -23,6 +23,9 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.status(200).send("Connected")
   })
+app.get("/test", (req, res) => {
+    res.status(200).send("passes 200")
+  })
 
   app.get('/searchname/:query', async (req, res) => {
     try {
