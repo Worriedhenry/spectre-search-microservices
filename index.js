@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-    res.status(200).send("Connected")
+    res.status(200).send(process.env)
   })
 app.get("/test", (req, res) => {
     res.status(200).send("passes 200")
