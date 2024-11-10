@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-    res.status(200).send(process.env)
+    res.status(200).send("Connected to search-service")
   })
 app.get("/test", (req, res) => {
     res.status(200).send("passes 200")
@@ -139,6 +139,6 @@ app.get("/search/:query/:page", async (req, res) => {
     res.json(results);
 })
 
-app.listen(5001, () => {
-    console.log("Server running on port 5000")
+app.listen(5003, () => {
+    console.log("Server running on port 5003")
 })  
