@@ -6,7 +6,12 @@ const User = require('./userSchema');
 
 const app = express();
 require('dotenv').config();
-app.use(cors());
+app.use(cors({
+    origin: '*' ,
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type,Authorization' 
+
+}));
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB)
